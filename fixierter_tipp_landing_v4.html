@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixierter Tipp | Thomas Bergmann</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: url('https://cdn.pixabay.com/photo/2020/10/06/08/38/table-tennis-5632021_1280.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    .overlay {
+      background-color: rgba(10, 10, 10, 0.88);
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      animation: fadeUp 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .headline {
+      font-size: 30px;
+      font-weight: 700;
+      color: #f5d100;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px #000000;
+      animation: fadeUp 1s ease-in-out;
+    }
+
+    .score-box {
+      background: #1e1e1e;
+      border: 1px solid #f5d100;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      text-align: center;
+      margin: 20px 0;
+      animation: fadeUp 1.2s ease-in-out;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #f5d100;
+      color: #111;
+      border-radius: 6px;
+      font-size: 17px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      animation: fadeUp 1.4s ease-in-out;
+    }
+
+    .cta-btn:hover {
+      background-color: #e0bf00;
+      transform: scale(1.03);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .review {
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      animation: fadeUp 1.6s ease-in-out;
+    }
+
+    .review-name {
+      font-weight: 600;
+      color: #cfcfcf;
+    }
+
+    .lang-switch {
+      text-align: right;
+      font-size: 14px;
+      margin-bottom: 10px;
+      animation: fadeUp 1s ease-in-out;
+    }
+
+    .lang-switch a {
+      color: #bbbbbb;
+      margin-left: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .en, .de {
+      display: none;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.de').forEach(el => el.style.display = (lang === 'de') ? 'block' : 'none');
+      document.querySelectorAll('.en').forEach(el => el.style.display = (lang === 'en') ? 'block' : 'none');
+    }
+    window.onload = function() {
+      switchLang('de');
+    };
+  </script>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <div class="lang-switch">
+        Sprache: <a onclick="switchLang('de')">DE</a> | <a onclick="switchLang('en')">EN</a>
+      </div>
+
+      <div class="section de">
+        <div class="headline">🎯 Fixiertes Ergebnis heute: 3:2</div>
+        <div>💸 100% sicher | Quote 5.00+<br>🔒 Nur für neue Mitglieder</div>
+        <a href="https://t.me/Sicherer2" class="cta-btn">Jetzt Prognose erhalten</a>
+      </div>
+      <div class="section en">
+        <div class="headline">🎯 Fixed score today: 3:2</div>
+        <div>💸 100% secure | Odds 5.00+<br>🔒 Only for new members</div>
+        <a href="https://t.me/Sicherer2" class="cta-btn">Get the prediction</a>
+      </div>
+
+      <div class="section de">
+        <div class="headline">Wie es funktioniert:</div>
+        <ul>
+          <li>✔️ Insider-Infos aus Deutschland</li>
+          <li>✔️ Exakter Spielstand vor dem Start</li>
+          <li>✔️ Keine Werbung für Buchmacher</li>
+          <li>✔️ Du wettest, wo du willst</li>
+        </ul>
+      </div>
+      <div class="section en">
+        <div class="headline">How it works:</div>
+        <ul>
+          <li>✔️ Insider info from Germany</li>
+          <li>✔️ Exact score before the match</li>
+          <li>✔️ No bookmaker ads</li>
+          <li>✔️ You bet wherever you want</li>
+        </ul>
+      </div>
+
+      <div class="section de">
+        <div class="headline">Erfahrungen:</div>
+        <div class="review">
+          <div class="review-name">🧑‍🔧 Thomas S. (Berlin):</div>
+          "Habe 20 € gesetzt – 103 € zurück. Ehrlich, schnell, top!"
+        </div>
+        <div class="review">
+          <div class="review-name">🧑‍💻 Daniel M. (München):</div>
+          "Ich dachte, es sei Fake – aber es hat funktioniert."
+        </div>
+      </div>
+      <div class="section en">
+        <div class="headline">Testimonials:</div>
+        <div class="review">
+          <div class="review-name">🧑‍🔧 Thomas S. (Berlin):</div>
+          "Bet 20 € – got 103 € back. Honest, fast, top!"
+        </div>
+        <div class="review">
+          <div class="review-name">🧑‍💻 Daniel M. (Munich):</div>
+          "Thought it was fake – but it worked."
+        </div>
+      </div>
+
+      <div class="section de">
+        <div class="headline">Letzte Chance heute:</div>
+        <div class="score-box">Nur 10 neue Plätze verfügbar</div>
+        <a href="https://t.me/Sicherer2" class="cta-btn">Zum Telegram-Kanal</a>
+      </div>
+      <div class="section en">
+        <div class="headline">Last chance today:</div>
+        <div class="score-box">Only 10 new spots available</div>
+        <a href="https://t.me/Sicherer2" class="cta-btn">Join Telegram Channel</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
